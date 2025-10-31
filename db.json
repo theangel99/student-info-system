@@ -1,364 +1,510 @@
 {
   "students": [
     {
-      "id": 1,
-      "firstName": "John",
-      "lastName": "Doe",
-      "email": "john.doe@example.com",
+      "id": "1",
+      "firstName": "Luka",
+      "lastName": "Novak",
+      "email": "luka.novak@example.com",
       "enrollmentDate": "2023-09-01",
-      "courses": ["Mathematics", "Physics", "Computer Science"]
+      "courses": [
+        "Fizika",
+        "Računalništvo"
+      ]
     },
     {
-      "id": 2,
-      "firstName": "Jane",
-      "lastName": "Smith",
-      "email": "jane.smith@example.com",
+      "id": "2",
+      "firstName": "Ana",
+      "lastName": "Horvat",
+      "email": "ana.horvat@example.com",
       "enrollmentDate": "2023-09-01",
-      "courses": ["Biology", "Chemistry", "English"]
+      "courses": [
+        "Biologija",
+        "Kemija",
+        "Angleščina",
+        "Matematika",
+        "Fizika",
+        "Računalništvo"
+      ]
     },
     {
-      "id": 3,
-      "firstName": "Michael",
-      "lastName": "Johnson",
-      "email": "michael.johnson@example.com",
+      "id": "3",
+      "firstName": "Matej",
+      "lastName": "Kovač",
+      "email": "matej.kovac@example.com",
       "enrollmentDate": "2023-09-05",
-      "courses": ["History", "Geography", "Art"]
+      "courses": [
+        "Zgodovina",
+        "Geografija",
+        "Umetnost"
+      ]
     },
     {
-      "id": 4,
-      "firstName": "Emily",
-      "lastName": "Williams",
-      "email": "emily.williams@example.com",
+      "id": "4",
+      "firstName": "Eva",
+      "lastName": "Krajnc",
+      "email": "eva.krajnc@example.com",
       "enrollmentDate": "2023-09-03",
-      "courses": ["Music", "Drama", "Physical Education"]
+      "courses": [
+        "Glasba",
+        "Drama",
+        "Telesna vzgoja"
+      ]
     },
     {
-      "id": 5,
+      "id": "5",
+      "firstName": "Jan",
+      "lastName": "Zupan",
+      "email": "jan.zupan@example.com",
+      "enrollmentDate": "2023-09-02",
+      "courses": [
+        "Ekonomija",
+        "Poslovanje",
+        "Matematika"
+      ]
+    },
+    {
+      "id": "6",
+      "firstName": "Maja",
+      "lastName": "Kos",
+      "email": "maja.kos@example.com",
+      "enrollmentDate": "2023-09-04",
+      "courses": [
+        "Psihologija",
+        "Sociologija",
+        "Filozofija"
+      ]
+    },
+    {
+      "id": "7",
+      "firstName": "Tim",
+      "lastName": "Petrič",
+      "email": "tim.petric@example.com",
+      "enrollmentDate": "2023-09-01",
+      "courses": [
+        "Računalništvo",
+        "Matematika",
+        "Statistika"
+      ]
+    },
+    {
+      "id": "8",
+      "firstName": "Nika",
+      "lastName": "Golob",
+      "email": "nika.golob@example.com",
+      "enrollmentDate": "2023-09-06",
+      "courses": [
+        "Literatura",
+        "Kreativno pisanje",
+        "Angleščina"
+      ]
+    },
+    {
+      "id": "9",
       "firstName": "David",
-      "lastName": "Brown",
-      "email": "david.brown@example.com",
+      "lastName": "Mlakar",
+      "email": "david.mlakar@example.com",
       "enrollmentDate": "2023-09-02",
-      "courses": ["Economics", "Business Studies", "Mathematics"]
+      "courses": [
+        "Inženiring",
+        "Fizika",
+        "Matematika"
+      ]
     },
     {
-      "id": 6,
-      "firstName": "Sarah",
-      "lastName": "Davis",
-      "email": "sarah.davis@example.com",
-      "enrollmentDate": "2023-09-04",
-      "courses": ["Psychology", "Sociology", "Philosophy"]
-    },
-    {
-      "id": 7,
-      "firstName": "James",
-      "lastName": "Miller",
-      "email": "james.miller@example.com",
-      "enrollmentDate": "2023-09-01",
-      "courses": ["Computer Science", "Mathematics", "Statistics"]
-    },
-    {
-      "id": 8,
-      "firstName": "Emma",
-      "lastName": "Wilson",
-      "email": "emma.wilson@example.com",
-      "enrollmentDate": "2023-09-06",
-      "courses": ["Literature", "Creative Writing", "English"]
-    },
-    {
-      "id": 9,
-      "firstName": "Daniel",
-      "lastName": "Moore",
-      "email": "daniel.moore@example.com",
-      "enrollmentDate": "2023-09-02",
-      "courses": ["Engineering", "Physics", "Mathematics"]
-    },
-    {
-      "id": 10,
-      "firstName": "Olivia",
-      "lastName": "Taylor",
-      "email": "olivia.taylor@example.com",
+      "id": "10",
+      "firstName": "Sara",
+      "lastName": "Potočnik",
+      "email": "sara.potocnik@example.com",
       "enrollmentDate": "2023-09-03",
-      "courses": ["Biology", "Environmental Science", "Chemistry"]
+      "courses": [
+        "Biologija",
+        "Okoljske vede",
+        "Kemija"
+      ]
     },
     {
-      "id": 11,
-      "firstName": "Alexander",
-      "lastName": "Anderson",
-      "email": "alexander.anderson@example.com",
+      "id": "11",
+      "firstName": "Gal",
+      "lastName": "Vidmar",
+      "email": "gal.vidmar@example.com",
       "enrollmentDate": "2023-09-05",
-      "courses": ["Political Science", "History", "Law"]
+      "courses": [
+        "Politične vede",
+        "Zgodovina",
+        "Pravo"
+      ]
     },
     {
-      "id": 12,
-      "firstName": "Sophia",
-      "lastName": "Thomas",
-      "email": "sophia.thomas@example.com",
+      "id": "12",
+      "firstName": "Ema",
+      "lastName": "Petek",
+      "email": "ema.petek@example.com",
       "enrollmentDate": "2023-09-01",
-      "courses": ["Marketing", "Business Studies", "Economics"]
+      "courses": [
+        "Marketing",
+        "Poslovanje",
+        "Ekonomija"
+      ]
     },
     {
-      "id": 13,
-      "firstName": "William",
-      "lastName": "Jackson",
-      "email": "william.jackson@example.com",
+      "id": "13",
+      "firstName": "Filip",
+      "lastName": "Hribar",
+      "email": "filip.hribar@example.com",
       "enrollmentDate": "2023-09-04",
-      "courses": ["Architecture", "Art", "Design"]
+      "courses": [
+        "Arhitektura",
+        "Umetnost",
+        "Oblikovanje"
+      ]
     },
     {
-      "id": 14,
-      "firstName": "Ava",
-      "lastName": "White",
-      "email": "ava.white@example.com",
+      "id": "14",
+      "firstName": "Lara",
+      "lastName": "Prijatelj",
+      "email": "lara.prijatelj@example.com",
       "enrollmentDate": "2023-09-02",
-      "courses": ["Nursing", "Biology", "Chemistry"]
+      "courses": [
+        "Zdravstvena nega",
+        "Biologija",
+        "Kemija"
+      ]
     },
     {
-      "id": 15,
-      "firstName": "Christopher",
-      "lastName": "Harris",
-      "email": "christopher.harris@example.com",
+      "id": "15",
+      "firstName": "Mark",
+      "lastName": "Močnik",
+      "email": "mark.mocnik@example.com",
       "enrollmentDate": "2023-09-06",
-      "courses": ["Finance", "Accounting", "Economics"]
+      "courses": [
+        "Finance",
+        "Računovodstvo",
+        "Ekonomija"
+      ]
     },
     {
-      "id": 16,
-      "firstName": "Isabella",
-      "lastName": "Martin",
-      "email": "isabella.martin@example.com",
+      "id": "16",
+      "firstName": "Nina",
+      "lastName": "Kavčič",
+      "email": "nina.kavcic@example.com",
       "enrollmentDate": "2023-09-01",
-      "courses": ["Journalism", "Media Studies", "English"]
+      "courses": [
+        "Novinarstvo",
+        "Medijske študije",
+        "Angleščina"
+      ]
     },
     {
-      "id": 17,
-      "firstName": "Matthew",
-      "lastName": "Thompson",
-      "email": "matthew.thompson@example.com",
+      "id": "17",
+      "firstName": "Anže",
+      "lastName": "Medved",
+      "email": "anze.medved@example.com",
       "enrollmentDate": "2023-09-03",
-      "courses": ["Mechanical Engineering", "Physics", "Mathematics"]
+      "courses": [
+        "Strojništvo",
+        "Fizika",
+        "Matematika"
+      ]
     },
     {
-      "id": 18,
-      "firstName": "Mia",
-      "lastName": "Garcia",
-      "email": "mia.garcia@example.com",
+      "id": "18",
+      "firstName": "Teja",
+      "lastName": "Babnik",
+      "email": "teja.babnik@example.com",
       "enrollmentDate": "2023-09-05",
-      "courses": ["Languages", "Literature", "History"]
+      "courses": [
+        "Jeziki",
+        "Literatura",
+        "Zgodovina"
+      ]
     },
     {
-      "id": 19,
-      "firstName": "Joshua",
-      "lastName": "Martinez",
-      "email": "joshua.martinez@example.com",
+      "id": "19",
+      "firstName": "Žan",
+      "lastName": "Erjavec",
+      "email": "zan.erjavec@example.com",
       "enrollmentDate": "2023-09-02",
-      "courses": ["Information Technology", "Computer Science", "Networking"]
+      "courses": [
+        "Informacijska tehnologija",
+        "Računalništvo",
+        "Omrežja"
+      ]
     },
     {
-      "id": 20,
-      "firstName": "Charlotte",
-      "lastName": "Robinson",
-      "email": "charlotte.robinson@example.com",
+      "id": "20",
+      "firstName": "Klara",
+      "lastName": "Rozman",
+      "email": "klara.rozman@example.com",
       "enrollmentDate": "2023-09-04",
-      "courses": ["Pharmacy", "Chemistry", "Biology"]
+      "courses": [
+        "Farmacija",
+        "Kemija",
+        "Biologija"
+      ]
     },
     {
-      "id": 21,
-      "firstName": "Andrew",
-      "lastName": "Clark",
-      "email": "andrew.clark@example.com",
+      "id": "21",
+      "firstName": "Blaž",
+      "lastName": "Kovačič",
+      "email": "blaz.kovacic@example.com",
       "enrollmentDate": "2023-09-01",
-      "courses": ["Graphic Design", "Art", "Digital Media"]
+      "courses": [
+        "Grafično oblikovanje",
+        "Umetnost",
+        "Digitalni mediji"
+      ]
     },
     {
-      "id": 22,
-      "firstName": "Amelia",
-      "lastName": "Rodriguez",
-      "email": "amelia.rodriguez@example.com",
+      "id": "22",
+      "firstName": "Zala",
+      "lastName": "Kalan",
+      "email": "zala.kalan@example.com",
       "enrollmentDate": "2023-09-06",
-      "courses": ["Education", "Psychology", "Sociology"]
+      "courses": [
+        "Pedagogika",
+        "Psihologija",
+        "Sociologija"
+      ]
     },
     {
-      "id": 23,
-      "firstName": "Ryan",
-      "lastName": "Lewis",
-      "email": "ryan.lewis@example.com",
+      "id": "23",
+      "firstName": "Rok",
+      "lastName": "Debeljak",
+      "email": "rok.debeljak@example.com",
       "enrollmentDate": "2023-09-03",
-      "courses": ["Civil Engineering", "Mathematics", "Physics"]
+      "courses": [
+        "Gradbeništvo",
+        "Matematika",
+        "Fizika"
+      ]
     },
     {
-      "id": 24,
-      "firstName": "Harper",
-      "lastName": "Lee",
-      "email": "harper.lee@example.com",
+      "id": "24",
+      "firstName": "Anja",
+      "lastName": "Jereb",
+      "email": "anja.jereb@example.com",
       "enrollmentDate": "2023-09-05",
-      "courses": ["Veterinary Science", "Biology", "Animal Behavior"]
+      "courses": [
+        "Veterina",
+        "Biologija",
+        "Vedenje živali"
+      ]
     },
     {
-      "id": 25,
-      "firstName": "Benjamin",
-      "lastName": "Walker",
-      "email": "benjamin.walker@example.com",
+      "id": "25",
+      "firstName": "Nejc",
+      "lastName": "Štular",
+      "email": "nejc.stular@example.com",
       "enrollmentDate": "2023-09-02",
-      "courses": ["Data Science", "Statistics", "Computer Science"]
+      "courses": [
+        "Podatkovna znanost",
+        "Statistika",
+        "Računalništvo"
+      ]
     },
     {
-      "id": 26,
-      "firstName": "Evelyn",
-      "lastName": "Hall",
-      "email": "evelyn.hall@example.com",
+      "id": "26",
+      "firstName": "Petra",
+      "lastName": "Fabjan",
+      "email": "petra.fabjan@example.com",
       "enrollmentDate": "2023-09-04",
-      "courses": ["International Relations", "Political Science", "Economics"]
+      "courses": [
+        "Mednarodni odnosi",
+        "Politične vede",
+        "Ekonomija"
+      ]
     },
     {
-      "id": 27,
-      "firstName": "Nathan",
-      "lastName": "Allen",
-      "email": "nathan.allen@example.com",
+      "id": "27",
+      "firstName": "Urban",
+      "lastName": "Kranjc",
+      "email": "urban.kranjc@example.com",
       "enrollmentDate": "2023-09-01",
-      "courses": ["Electrical Engineering", "Physics", "Mathematics"]
+      "courses": [
+        "Elektrotehnika",
+        "Fizika",
+        "Matematika"
+      ]
     },
     {
-      "id": 28,
-      "firstName": "Abigail",
-      "lastName": "Young",
-      "email": "abigail.young@example.com",
+      "id": "28",
+      "firstName": "Ines",
+      "lastName": "Božič",
+      "email": "ines.bozic@example.com",
       "enrollmentDate": "2023-09-06",
-      "courses": ["Fashion Design", "Art", "Business Studies"]
+      "courses": [
+        "Modno oblikovanje",
+        "Umetnost",
+        "Poslovanje"
+      ]
     },
     {
-      "id": 29,
-      "firstName": "Ethan",
-      "lastName": "Hernandez",
-      "email": "ethan.hernandez@example.com",
+      "id": "29",
+      "firstName": "Gregor",
+      "lastName": "Pintarič",
+      "email": "gregor.pintaric@example.com",
       "enrollmentDate": "2023-09-03",
-      "courses": ["Aerospace Engineering", "Physics", "Mathematics"]
+      "courses": [
+        "Letalstvo",
+        "Fizika",
+        "Matematika"
+      ]
     },
     {
-      "id": 30,
-      "firstName": "Elizabeth",
-      "lastName": "King",
-      "email": "elizabeth.king@example.com",
+      "id": "30",
+      "firstName": "Špela",
+      "lastName": "Završnik",
+      "email": "spela.zavrsnik@example.com",
       "enrollmentDate": "2023-09-05",
-      "courses": ["Law", "Political Science", "History"]
+      "courses": [
+        "Pravo",
+        "Politične vede",
+        "Zgodovina"
+      ]
     },
     {
-      "id": 31,
-      "firstName": "Lucas",
-      "lastName": "Wright",
-      "email": "lucas.wright@example.com",
+      "id": "31",
+      "firstName": "Matic",
+      "lastName": "Kunstelj",
+      "email": "matic.kunstelj@example.com",
       "enrollmentDate": "2023-09-02",
-      "courses": ["Software Engineering", "Computer Science", "Mathematics"]
+      "courses": [
+        "Programsko inženirstvo",
+        "Računalništvo",
+        "Matematika"
+      ]
     },
     {
-      "id": 32,
-      "firstName": "Sofia",
-      "lastName": "Lopez",
-      "email": "sofia.lopez@example.com",
+      "id": "32",
+      "firstName": "Tina",
+      "lastName": "Oblak",
+      "email": "tina.oblak@example.com",
       "enrollmentDate": "2023-09-04",
-      "courses": ["Human Resources", "Business Studies", "Psychology"]
+      "courses": [
+        "Človeški viri",
+        "Poslovanje",
+        "Psihologija"
+      ]
     },
     {
-      "id": 33,
-      "firstName": "Henry",
-      "lastName": "Hill",
-      "email": "henry.hill@example.com",
+      "id": "33",
+      "firstName": "Luka",
+      "lastName": "Pirnat",
+      "email": "luka.pirnat@example.com",
       "enrollmentDate": "2023-09-01",
-      "courses": ["Marine Biology", "Biology", "Environmental Science"]
+      "courses": [
+        "Morska biologija",
+        "Biologija",
+        "Okoljske vede"
+      ]
     },
     {
-      "id": 34,
-      "firstName": "Victoria",
-      "lastName": "Scott",
-      "email": "victoria.scott@example.com",
+      "id": "34",
+      "firstName": "Katja",
+      "lastName": "Tomažič",
+      "email": "katja.tomazic@example.com",
       "enrollmentDate": "2023-09-06",
-      "courses": ["Public Relations", "Marketing", "Communications"]
+      "courses": [
+        "Odnosi z javnostmi",
+        "Marketing",
+        "Komunikacije"
+      ]
     },
     {
-      "id": 35,
-      "firstName": "Jack",
-      "lastName": "Green",
-      "email": "jack.green@example.com",
+      "id": "35",
+      "firstName": "Marko",
+      "lastName": "Koren",
+      "email": "marko.koren@example.com",
       "enrollmentDate": "2023-09-03",
-      "courses": ["Sports Science", "Physical Education", "Biology"]
+      "courses": [
+        "Športna znanost",
+        "Telesna vzgoja",
+        "Biologija"
+      ]
     },
     {
-      "id": 36,
-      "firstName": "Grace",
-      "lastName": "Adams",
-      "email": "grace.adams@example.com",
+      "id": "36",
+      "firstName": "Neža",
+      "lastName": "Stanovnik",
+      "email": "neza.stanovnik@example.com",
       "enrollmentDate": "2023-09-05",
-      "courses": ["Interior Design", "Art", "Architecture"]
+      "courses": [
+        "Notranje oblikovanje",
+        "Umetnost",
+        "Arhitektura"
+      ]
     },
     {
-      "id": 37,
-      "firstName": "Samuel",
-      "lastName": "Baker",
-      "email": "samuel.baker@example.com",
+      "id": "37",
+      "firstName": "Jaka",
+      "lastName": "Lampret",
+      "email": "jaka.lampret@example.com",
       "enrollmentDate": "2023-09-02",
-      "courses": ["Astronomy", "Physics", "Mathematics"]
+      "courses": [
+        "Astronomija",
+        "Fizika",
+        "Matematika"
+      ]
     },
     {
-      "id": 38,
-      "firstName": "Chloe",
-      "lastName": "Gonzalez",
-      "email": "chloe.gonzalez@example.com",
+      "id": "38",
+      "firstName": "Maša",
+      "lastName": "Pavlin",
+      "email": "masa.pavlin@example.com",
       "enrollmentDate": "2023-09-04",
-      "courses": ["Film Studies", "Media Studies", "English"]
+      "courses": [
+        "Filmske študije",
+        "Medijske študije",
+        "Angleščina"
+      ]
     },
     {
-      "id": 39,
-      "firstName": "Joseph",
-      "lastName": "Nelson",
-      "email": "joseph.nelson@example.com",
+      "id": "39",
+      "firstName": "Aljaž",
+      "lastName": "Černela",
+      "email": "aljaz.cernela@example.com",
       "enrollmentDate": "2023-09-01",
-      "courses": ["Robotics", "Computer Science", "Engineering"]
+      "courses": [
+        "Robotika",
+        "Računalništvo",
+        "Inženiring"
+      ]
     },
     {
-      "id": 40,
-      "firstName": "Lily",
-      "lastName": "Carter",
-      "email": "lily.carter@example.com",
+      "id": "40",
+      "firstName": "Živa",
+      "lastName": "Mihelič",
+      "email": "ziva.mihelic@example.com",
       "enrollmentDate": "2023-09-06",
-      "courses": ["Culinary Arts", "Nutrition", "Business Studies"]
+      "courses": [
+        "Kulinarne umetnosti",
+        "Prehrana",
+        "Poslovanje"
+      ]
     },
     {
-      "id": 41,
-      "firstName": "Owen",
-      "lastName": "Mitchell",
-      "email": "owen.mitchell@example.com",
-      "enrollmentDate": "2023-09-03",
-      "courses": ["Geology", "Environmental Science", "Geography"]
-    },
-    {
-      "id": 42,
-      "firstName": "Zoe",
-      "lastName": "Perez",
-      "email": "zoe.perez@example.com",
-      "enrollmentDate": "2023-09-05",
-      "courses": ["Photography", "Art", "Digital Media"]
+      "id": "42",
+      "firstName": "Rok",
+      "lastName": "Veber",
+      "email": "test@gmail.com",
+      "enrollmentDate": "2000-10-15",
+      "courses": [
+        "Medijske študije",
+        "Novinarstvo",
+        "Računovodstvo"
+      ]
     },
     {
       "id": 43,
-      "firstName": "Liam",
-      "lastName": "Roberts",
-      "email": "liam.roberts@example.com",
-      "enrollmentDate": "2023-09-02",
-      "courses": ["Music Production", "Music", "Technology"]
-    },
-    {
-      "id": 44,
-      "firstName": "Madison",
-      "lastName": "Turner",
-      "email": "madison.turner@example.com",
-      "enrollmentDate": "2023-09-04",
-      "courses": ["Social Work", "Psychology", "Sociology"]
-    },
-    {
-      "id": 45,
-      "firstName": "Noah",
-      "lastName": "Phillips",
-      "email": "noah.phillips@example.com",
-      "enrollmentDate": "2023-09-01",
-      "courses": ["Biochemistry", "Chemistry", "Biology"]
+      "firstName": "Miha",
+      "lastName": "Konjar",
+      "email": "test1@gmail.com",
+      "enrollmentDate": "2002-11-15",
+      "courses": [
+        "Tehnologija",
+        "Glasbena produkcija",
+        "Socialno delo"
+      ]
     }
   ]
 }

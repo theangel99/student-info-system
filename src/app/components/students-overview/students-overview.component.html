@@ -1,17 +1,17 @@
 <div class="students-overview-container">
   <!-- Header with Super Admin Name -->
   <div class="header">
-    <h1>Student Information System</h1>
+    <h1>Informacijski sistem študentov</h1>
     <div class="admin-info">
       <i class="pi pi-user"></i>
-      <span>Super Admin: {{ superAdminName }}</span>
+      <span>Skrbnik: {{ superAdminName }}</span>
     </div>
   </div>
 
   <!-- Add Student Button -->
   <div class="actions">
     <p-button 
-      label="Add New Student" 
+      label="Dodaj novega študenta" 
       icon="pi pi-plus" 
       (onClick)="showAddDialog()"
       styleClass="p-button-success">
@@ -24,20 +24,20 @@
     [paginator]="true" 
     [rows]="20" 
     [showCurrentPageReport]="true"
-    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} students"
-    [rowsPerPageOptions]="[10, 20, 50]"
+    currentPageReportTemplate="Prikazujem {first} do {last} od {totalRecords} študentov"
+    [rowsPerPageOptions]="[10, 20, 50, 100]"
     [tableStyle]="{ 'min-width': '50rem' }"
     styleClass="p-datatable-striped">
     
     <ng-template pTemplate="header">
       <tr>
         <th>ID</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-        <th>Enrollment Date</th>
-        <th>Courses</th>
-        <th>Actions</th>
+        <th>Ime</th>
+        <th>Priimek</th>
+        <th>E-pošta</th>
+        <th>Datum vpisa</th>
+        <th>Predmeti</th>
+        <th>Dejanja</th>
       </tr>
     </ng-template>
     
@@ -56,13 +56,13 @@
             icon="pi pi-pencil" 
             styleClass="p-button-rounded p-button-warning p-button-text" 
             (onClick)="showEditDialog(student)"
-            pTooltip="Edit Courses">
+            pTooltip="Uredi predmete">
           </p-button>
           <p-button 
             icon="pi pi-trash" 
             styleClass="p-button-rounded p-button-danger p-button-text" 
             (onClick)="deleteStudent(student)"
-            pTooltip="Delete Student">
+            pTooltip="Izbriši študenta">
           </p-button>
         </td>
       </tr>
@@ -70,68 +70,69 @@
     
     <ng-template pTemplate="emptymessage">
       <tr>
-        <td colspan="7" style="text-align: center;">No students found.</td>
+        <td colspan="7" style="text-align: center;">Ni najdenih študentov.</td>
       </tr>
     </ng-template>
   </p-table>
 
   <!-- Add Student Dialog -->
   <p-dialog 
-    header="Add New Student" 
+    header="Dodaj novega študenta" 
     [(visible)]="displayAddDialog" 
     [modal]="true" 
     [style]="{ width: '500px' }"
     [draggable]="false"
-    [resizable]="false">
+    [resizable]="false"
+    [appendTo]="'body'">
     
     <form [formGroup]="studentForm">
       <div class="form-field">
-        <label for="firstName">First Name *</label>
+        <label for="firstName">Ime *</label>
         <input 
           id="firstName" 
           type="text" 
           pInputText 
           formControlName="firstName" 
-          placeholder="Enter first name" />
+          placeholder="Vnesite ime" />
         <small 
           *ngIf="studentForm.get('firstName')?.invalid && studentForm.get('firstName')?.touched" 
           class="p-error">
-          First name is required (min 2 characters)
+          Ime je obvezno (min 2 znaka)
         </small>
       </div>
 
       <div class="form-field">
-        <label for="lastName">Last Name *</label>
+        <label for="lastName">Priimek *</label>
         <input 
           id="lastName" 
           type="text" 
           pInputText 
           formControlName="lastName" 
-          placeholder="Enter last name" />
+          placeholder="Vnesite priimek" />
         <small 
           *ngIf="studentForm.get('lastName')?.invalid && studentForm.get('lastName')?.touched" 
           class="p-error">
-          Last name is required (min 2 characters)
+          Priimek je obvezen (min 2 znaka)
         </small>
       </div>
 
       <div class="form-field">
-        <label for="email">Email *</label>
+        <label for="email">E-pošta *</label>
         <input 
           id="email" 
           type="email" 
           pInputText 
           formControlName="email" 
-          placeholder="Enter email address" />
+          placeholder="Vnesite e-poštni naslov" />
         <small 
           *ngIf="studentForm.get('email')?.invalid && studentForm.get('email')?.touched" 
           class="p-error">
-          Valid email is required
+          Veljaven e-poštni naslov je obvezen
         </small>
       </div>
 
       <div class="form-field">
-        <label for="enrollmentDate">Enrollment Date *</label>
+        <label for="enrollmentDate">Datum vpisa *</label>
         <input 
           id="enrollmentDate" 
           type="date" 
@@ -140,38 +141,40 @@
         <small 
           *ngIf="studentForm.get('enrollmentDate')?.invalid && studentForm.get('enrollmentDate')?.touched" 
           class="p-error">
-          Enrollment date is required
+          Datum vpisa je obvezen
         </small>
       </div>
 
       <div class="form-field">
-        <label for="courses">Courses *</label>
+        <label for="courses">Predmeti *</label>
         <p-multiSelect 
           id="courses"
           [options]="availableCourses" 
           formControlName="courses" 
-          placeholder="Select courses"
+          placeholder="Izberite predmete"
           [style]="{'width': '100%'}"
           [filter]="true"
-          filterPlaceHolder="Search courses">
+          filterPlaceHolder="Iskanje predmetov"
+          [appendTo]="'body'"
+          [panelStyle]="{'max-height': '300px'}">
         </p-multiSelect>
         <small 
           *ngIf="studentForm.get('courses')?.invalid && studentForm.get('courses')?.touched" 
           class="p-error">
-          At least one course is required
+          Vsaj en predmet je obvezen
         </small>
       </div>
     </form>
 
     <ng-template pTemplate="footer">
       <p-button 
-        label="Cancel" 
+        label="Prekliči" 
         icon="pi pi-times" 
         (onClick)="displayAddDialog = false" 
         styleClass="p-button-text">
       </p-button>
       <p-button 
-        label="Add Student" 
+        label="Dodaj študenta" 
         icon="pi pi-check" 
         (onClick)="addStudent()" 
         [disabled]="studentForm.invalid">
@@ -181,47 +184,50 @@
 
   <!-- Edit Student Dialog -->
   <p-dialog 
-    header="Edit Student Courses" 
+    header="Uredi predmete študenta" 
     [(visible)]="displayEditDialog" 
     [modal]="true" 
     [style]="{ width: '500px' }"
     [draggable]="false"
-    [resizable]="false">
+    [resizable]="false"
+    [appendTo]="'body'">
     
     <div *ngIf="selectedStudent" class="student-info">
-      <p><strong>Student:</strong> {{ selectedStudent.firstName }} {{ selectedStudent.lastName }}</p>
-      <p><strong>Email:</strong> {{ selectedStudent.email }}</p>
+      <p><strong>Študent:</strong> {{ selectedStudent.firstName }} {{ selectedStudent.lastName }}</p>
+      <p><strong>E-pošta:</strong> {{ selectedStudent.email }}</p>
     </div>
 
     <form [formGroup]="editStudentForm">
       <div class="form-field">
-        <label for="editCourses">Courses *</label>
+        <label for="editCourses">Predmeti *</label>
         <p-multiSelect 
           id="editCourses"
           [options]="availableCourses" 
           formControlName="courses" 
-          placeholder="Select courses"
+          placeholder="Izberite predmete"
           [style]="{'width': '100%'}"
           [filter]="true"
-          filterPlaceHolder="Search courses">
+          filterPlaceHolder="Iskanje predmetov"
+          [appendTo]="'body'"
+          [panelStyle]="{'max-height': '300px'}">
         </p-multiSelect>
         <small 
           *ngIf="editStudentForm.get('courses')?.invalid && editStudentForm.get('courses')?.touched" 
           class="p-error">
-          At least one course is required
+          Vsaj en predmet je obvezen
         </small>
       </div>
     </form>
 
     <ng-template pTemplate="footer">
       <p-button 
-        label="Cancel" 
+        label="Prekliči" 
         icon="pi pi-times" 
         (onClick)="displayEditDialog = false" 
         styleClass="p-button-text">
       </p-button>
       <p-button 
-        label="Update" 
+        label="Posodobi" 
         icon="pi pi-check" 
         (onClick)="updateStudent()" 
         [disabled]="editStudentForm.invalid">

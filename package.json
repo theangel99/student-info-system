@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:student-information-system": "node dist/student-information-system/server/server.mjs",
-    "api": "json-server --watch db.json --port 3000"
+    "api": "json-server db.json --port 3000"
   },
   "private": true,
   "dependencies": {

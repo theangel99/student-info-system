@@ -1,46 +1,59 @@
 .students-overview-container {
-  padding: 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  padding: 0;
+  max-width: 100%;
+  margin: 0;
+  min-height: 100vh;
+  background: #f8f9fa;
 
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 0;
+    padding: 1rem 1.5rem;
+    background: #2c3e50;
+    border-radius: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     h1 {
       margin: 0;
-      color: #333;
-      font-size: 2rem;
+      color: #ffffff;
+      font-size: 1.125rem;
+      font-weight: 600;
+      text-shadow: none;
+      letter-spacing: 0;
     }
 
     .admin-info {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      font-size: 1rem;
-      color: #666;
-      background-color: #f5f5f5;
-      padding: 0.75rem 1.25rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      font-size: 0.8125rem;
+      color: #ecf0f1;
+      background: transparent;
+      backdrop-filter: none;
+      padding: 0;
+      border-radius: 0;
+      box-shadow: none;
+      border: none;
 
       i {
-        font-size: 1.25rem;
-        color: #2196F3;
+        font-size: 0.875rem;
+        color: #95a5a6;
       }
 
       span {
-        font-weight: 500;
+        font-weight: 400;
+        color: #bdc3c7;
       }
     }
   }
 
   .actions {
-    margin-bottom: 1.5rem;
+    margin: 0;
+    padding: 1rem 1.5rem;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
   }
 
   .courses-list {
@@ -49,41 +62,59 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 0.95rem;
   }
 
   .form-field {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 
     label {
       display: block;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.375rem;
       font-weight: 500;
-      color: #333;
+      color: #4a5568;
+      font-size: 0.8125rem;
     }
 
     input {
       width: 100%;
+      border-radius: 4px;
+      border: 1px solid #cbd5e0;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8125rem;
+      transition: all 0.15s ease;
+
+      &:focus {
+        border-color: #3182ce;
+        box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+        outline: none;
+      }
     }
 
     .p-error {
       display: block;
       margin-top: 0.25rem;
-      color: #f44336;
-      font-size: 0.875rem;
+      color: #e53e3e;
+      font-size: 0.75rem;
+      font-weight: 400;
     }
   }
 
   .student-info {
-    background-color: #f9f9f9;
-    padding: 1rem;
+    background: #f7fafc;
+    padding: 0.75rem;
     border-radius: 4px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
 
     p {
-      margin: 0.5rem 0;
+      margin: 0.375rem 0;
+      font-size: 0.8125rem;
+      color: #4a5568;
       
       strong {
-        color: #333;
+        color: #2d3748;
+        font-weight: 500;
       }
     }
   }
@@ -91,39 +122,460 @@
 
 ::ng-deep {
   .p-datatable {
+    border-radius: 0;
+    overflow: visible;
+    box-shadow: none;
+    background: white;
+    border: 1px solid #e2e8f0;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+
     .p-datatable-thead > tr > th {
-      background-color: #2196F3;
-      color: white;
+      background: #f7fafc;
+      color: #4a5568;
       font-weight: 600;
+      padding: 0.625rem 0.75rem;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: none;
+      border-bottom: 2px solid #e2e8f0;
     }
 
     .p-datatable-tbody > tr {
+      transition: background-color 0.15s ease;
+      border-bottom: 1px solid #edf2f7;
+
+      td {
+        padding: 0.5rem 0.75rem;
+        color: #2d3748;
+        font-size: 0.75rem;
+      }
+
       &:hover {
-        background-color: #f5f5f5;
+        background: #f7fafc;
+      }
+
+      &:last-child {
+        border-bottom: none;
       }
     }
   }
 
   .p-button {
     margin-right: 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.15s ease;
+    box-shadow: none;
+    font-size: 0.8125rem;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    &.p-button-success {
+      background: #3182ce;
+      border: 1px solid #3182ce;
+      
+      &:hover {
+        background: #2c5aa0;
+        border-color: #2c5aa0;
+      }
+    }
+
+    // Icon-only buttons for actions (edit/delete)
+    &.p-button-rounded {
+      width: 2rem;
+      height: 2rem;
+      padding: 0;
+      margin-right: 0.25rem;
+      background: #f7fafc;
+      border: 1px solid #e2e8f0;
+      color: #4a5568;
+
+      &:hover {
+        background: #edf2f7;
+        border-color: #cbd5e0;
+      }
+
+      &.p-button-warning {
+        background: #f7fafc;
+        border: 1px solid #e2e8f0;
+        color: #ed8936;
+        
+        &:hover {
+          background: #fff5f0;
+          border-color: #fed7d7;
+          color: #dd6b20;
+        }
+      }
+
+      &.p-button-danger {
+        background: #f7fafc;
+        border: 1px solid #e2e8f0;
+        color: #e53e3e;
+        
+        &:hover {
+          background: #fff5f5;
+          border-color: #fed7d7;
+          color: #c53030;
+        }
+      }
+    }
   }
 
   .p-dialog {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
     .p-dialog-header {
-      background-color: #2196F3;
+      background: #2c3e50;
       color: white;
+      padding: 0.875rem 1rem;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      border-bottom: 1px solid #34495e;
     }
 
     .p-dialog-content {
-      padding: 1.5rem;
+      padding: 1rem;
+      background: #ffffff;
+    }
+
+    .p-dialog-footer {
+      padding: 0.75rem 1rem;
+      background: #f7fafc;
+      border-top: 1px solid #e2e8f0;
     }
   }
 
   .p-multiselect {
     width: 100%;
+    border-radius: 4px;
+    border: 1px solid #cbd5e0;
+    transition: all 0.15s ease;
+    font-size: 0.8125rem;
+
+    &:not(.p-disabled):hover {
+      border-color: #3182ce;
+    }
+
+    &.p-focus {
+      border-color: #3182ce;
+      box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+    }
+  }
+
+  .p-multiselect-panel {
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #cbd5e0;
+
+    .p-multiselect-header {
+      background: #f7fafc;
+      border-radius: 4px 4px 0 0;
+      padding: 0.625rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .p-multiselect-items {
+      padding: 0.375rem;
+
+      .p-multiselect-item {
+        border-radius: 3px;
+        margin: 0.0625rem 0;
+        padding: 0.375rem 0.625rem;
+        transition: background-color 0.15s ease;
+        color: #2d3748;
+        font-size: 0.8125rem;
+
+        &:hover {
+          background: #edf2f7;
+        }
+
+        &.p-highlight {
+          background: #3182ce;
+          color: white;
+        }
+      }
+    }
   }
 
   .p-toast {
     z-index: 9999;
+
+    .p-toast-message {
+      border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      backdrop-filter: none;
+
+      &.p-toast-message-success {
+        background: #48bb78;
+        border: none;
+      }
+
+      &.p-toast-message-error {
+        background: #e53e3e;
+        border: none;
+      }
+    }
+  }
+
+  .p-confirm-dialog {
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+    .p-dialog-header {
+      background: #2c3e50;
+      color: white;
+      border-radius: 6px 6px 0 0;
+    }
+  }
+
+  .p-paginator {
+    background: white;
+    border-radius: 0;
+    padding: 0.5rem 0.75rem !important;
+    border-top: 1px solid #e2e8f0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem;
+    min-height: 2.5rem !important;
+    max-height: 2.5rem !important;
+    height: 2.5rem !important;
+
+    &::-webkit-scrollbar {
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #edf2f7;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #cbd5e0;
+      
+      &:hover {
+        background: #a0aec0;
+      }
+    }
+
+    .p-paginator-left-content {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      color: #4a5568;
+      flex-shrink: 0;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .p-paginator-current {
+      font-size: 0.75rem;
+      color: #4a5568;
+      padding: 0 !important;
+      margin: 0 !important;
+      white-space: nowrap;
+    }
+
+    .p-paginator-rpp-options {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.375rem;
+      margin: 0 !important;
+      padding: 0 !important;
+      
+      .p-dropdown {
+        margin: 0 !important;
+      }
+    }
+
+    .p-paginator-pages {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 0.125rem;
+    }
+
+    .p-paginator-page,
+    .p-paginator-next,
+    .p-paginator-prev,
+    .p-paginator-first,
+    .p-paginator-last {
+      border-radius: 3px;
+      transition: background-color 0.15s ease;
+      margin: 0;
+      min-width: 1.75rem;
+      height: 1.75rem;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+
+      &:hover {
+        background: #edf2f7;
+      }
+
+      &.p-highlight {
+        background: #3182ce;
+        border-color: transparent;
+        color: white;
+      }
+    }
+  }
+
+  // Fix for rows per page dropdown
+  .p-dropdown {
+    border-radius: 4px;
+    border: 1px solid #cbd5e0;
+    font-size: 0.75rem;
+    height: 1.75rem !important;
+    min-height: 1.75rem !important;
+    max-height: 1.75rem !important;
+    min-width: 4rem;
+    background: white;
+    position: relative;
+    flex-shrink: 0;
+
+    .p-dropdown-label {
+      padding: 0.25rem 0.5rem !important;
+      font-size: 0.75rem;
+      line-height: 1.25rem !important;
+      display: flex;
+      align-items: center;
+    }
+
+    .p-dropdown-trigger {
+      width: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:hover {
+      border-color: #3182ce;
+    }
+
+    &.p-focus {
+      border-color: #3182ce;
+      box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.1);
+    }
+  }
+
+  .p-dropdown-panel {
+    position: fixed !important;
+    border-radius: 4px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid #cbd5e0;
+    z-index: 9999 !important;
+    background: white;
+    min-width: 5rem !important;
+    pointer-events: auto !important;
+
+    .p-dropdown-items-wrapper {
+      max-height: 200px !important;
+      overflow-y: auto !important;
+      overflow-x: hidden;
+      pointer-events: auto !important;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #f7fafc;
+        border-radius: 4px;
+        margin: 4px 0;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #a0aec0;
+        border-radius: 4px;
+        
+        &:hover {
+          background: #718096;
+        }
+      }
+    }
+
+    .p-dropdown-items {
+      padding: 0.25rem 0;
+    }
+
+    .p-dropdown-item {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+      transition: background-color 0.1s ease;
+      cursor: pointer !important;
+      user-select: none;
+      white-space: nowrap;
+      margin: 0;
+      pointer-events: auto !important;
+
+      &:hover {
+        background: #edf2f7 !important;
+      }
+
+      &.p-highlight {
+        background: #3182ce !important;
+        color: white !important;
+      }
+
+      &:focus {
+        outline: none;
+        background: #edf2f7;
+      }
+    }
+  }
+
+  // Prevent any margin/padding changes when dropdown opens
+  .p-paginator-rpp-options,
+  .p-paginator-left-content,
+  .p-paginator-current,
+  .p-paginator .p-dropdown {
+    margin: 0 !important;
+  }
+
+  // Force paginator to maintain exact height
+  .p-datatable .p-paginator-bottom {
+    height: 2.5rem !important;
+    min-height: 2.5rem !important;
+    max-height: 2.5rem !important;
+    overflow: visible !important;
+    padding: 0.5rem 0.75rem !important;
+  }
+
+  // Ensure table wrapper doesn't interfere with pagination
+  .p-datatable-wrapper {
+    overflow-x: auto;
+    overflow-y: visible !important;
+  }
+
+  // Keep dropdown open when hovering over it
+  .p-dropdown-panel:hover,
+  .p-dropdown-items-wrapper:hover,
+  .p-dropdown-item:hover {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  // Prevent dropdown from being cut off
+  .p-dropdown-panel.p-connected-overlay-enter-done {
+    display: block !important;
+  }
+
+  .p-inputtext {
+    border-radius: 4px;
+    border: 1px solid #cbd5e0;
+    transition: border-color 0.15s ease;
+    font-size: 0.8125rem;
+
+    &:enabled:focus {
+      border-color: #3182ce;
+      box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+    }
   }
 }

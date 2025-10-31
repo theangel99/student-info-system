@@ -39,75 +39,75 @@ export class StudentsOverviewComponent implements OnInit {
   studentForm!: FormGroup;
   editStudentForm!: FormGroup;
   selectedStudent: Student | null = null;
-  superAdminName = 'Administrator';
+  superAdminName = 'Skrbnik';
   
   availableCourses = [
-    'Mathematics',
-    'Physics',
-    'Computer Science',
-    'Biology',
-    'Chemistry',
-    'English',
-    'History',
-    'Geography',
-    'Art',
-    'Music',
+    'Matematika',
+    'Fizika',
+    'Računalništvo',
+    'Biologija',
+    'Kemija',
+    'Angleščina',
+    'Zgodovina',
+    'Geografija',
+    'Umetnost',
+    'Glasba',
     'Drama',
-    'Physical Education',
-    'Economics',
-    'Business Studies',
-    'Psychology',
-    'Sociology',
-    'Philosophy',
-    'Literature',
-    'Creative Writing',
-    'Engineering',
-    'Environmental Science',
-    'Political Science',
-    'Law',
+    'Telesna vzgoja',
+    'Ekonomija',
+    'Poslovanje',
+    'Psihologija',
+    'Sociologija',
+    'Filozofija',
+    'Literatura',
+    'Kreativno pisanje',
+    'Inženiring',
+    'Okoljske vede',
+    'Politične vede',
+    'Pravo',
     'Marketing',
-    'Architecture',
-    'Design',
-    'Nursing',
+    'Arhitektura',
+    'Oblikovanje',
+    'Zdravstvena nega',
     'Finance',
-    'Accounting',
-    'Journalism',
-    'Media Studies',
-    'Mechanical Engineering',
-    'Languages',
-    'Information Technology',
-    'Networking',
-    'Pharmacy',
-    'Graphic Design',
-    'Digital Media',
-    'Education',
-    'Civil Engineering',
-    'Veterinary Science',
-    'Animal Behavior',
-    'Data Science',
-    'Statistics',
-    'International Relations',
-    'Electrical Engineering',
-    'Fashion Design',
-    'Aerospace Engineering',
-    'Software Engineering',
-    'Human Resources',
-    'Marine Biology',
-    'Public Relations',
-    'Communications',
-    'Sports Science',
-    'Interior Design',
-    'Astronomy',
-    'Film Studies',
-    'Robotics',
-    'Culinary Arts',
-    'Nutrition',
-    'Geology',
-    'Photography',
-    'Music Production',
-    'Technology',
-    'Social Work',
-    'Biochemistry'
+    'Računovodstvo',
+    'Novinarstvo',
+    'Medijske študije',
+    'Strojništvo',
+    'Jeziki',
+    'Informacijska tehnologija',
+    'Omrežja',
+    'Farmacija',
+    'Grafično oblikovanje',
+    'Digitalni mediji',
+    'Pedagogika',
+    'Gradbeništvo',
+    'Veterina',
+    'Vedenje živali',
+    'Podatkovna znanost',
+    'Statistika',
+    'Mednarodni odnosi',
+    'Elektrotehnika',
+    'Modno oblikovanje',
+    'Letalstvo',
+    'Programsko inženirstvo',
+    'Človeški viri',
+    'Morska biologija',
+    'Odnosi z javnostmi',
+    'Komunikacije',
+    'Športna znanost',
+    'Notranje oblikovanje',
+    'Astronomija',
+    'Filmske študije',
+    'Robotika',
+    'Kulinarne umetnosti',
+    'Prehrana',
+    'Geologija',
+    'Fotografija',
+    'Glasbena produkcija',
+    'Tehnologija',
+    'Socialno delo',
+    'Biokemija'
   ];
 
   constructor(
@@ -151,8 +151,8 @@ export class StudentsOverviewComponent implements OnInit {
       error: (error) => {
         this.messageService.add({
           severity: 'error',
-          summary: 'Error',
-          detail: 'Failed to load students'
+          summary: 'Napaka',
+          detail: 'Napaka pri nalaganju študentov'
         });
         console.error('Error loading students:', error);
       }
@@ -184,21 +184,28 @@ export class StudentsOverviewComponent implements OnInit {
   addStudent(): void {
     if (this.studentForm.valid) {
       const newStudent: Student = this.studentForm.value;
+      
+      // Calculate next ID based on existing students
+      const maxId = this.students.length > 0 
+        ? Math.max(...this.students.map(s => s.id || 0))
+        : 0;
+      newStudent.id = maxId + 1;
+      
       this.studentService.createStudent(newStudent).subscribe({
         next: (student) => {
-          this.students.push(student);
+          this.loadStudents(); // Reload to get proper ID
           this.displayAddDialog = false;
           this.messageService.add({
             severity: 'success',
-            summary: 'Success',
-            detail: 'Student added successfully'
+            summary: 'Uspeh',
+            detail: 'Študent uspešno dodan'
           });
         },
         error: (error) => {
           this.messageService.add({
             severity: 'error',
-            summary: 'Error',
-            detail: 'Failed to add student'
+            summary: 'Napaka',
+            detail: 'Napaka pri dodajanju študenta'
           });
           console.error('Error adding student:', error);
         }
@@ -225,15 +232,15 @@ export class StudentsOverviewComponent implements OnInit {
           this.displayEditDialog = false;
           this.messageService.add({
             severity: 'success',
-            summary: 'Success',
-            detail: 'Student updated successfully'
+            summary: 'Uspeh',
+            detail: 'Študent uspešno posodobljen'
           });
         },
         error: (error) => {
           this.messageService.add({
             severity: 'error',
-            summary: 'Error',
-            detail: 'Failed to update student'
+            summary: 'Napaka',
+            detail: 'Napaka pri posodabljanju študenta'
           });
           console.error('Error updating student:', error);
         }
@@ -246,8 +253,8 @@ export class StudentsOverviewComponent implements OnInit {
    */
   deleteStudent(student: Student): void {
     this.confirmationService.confirm({
-      message: `Are you sure you want to delete ${student.firstName} ${student.lastName}?`,
-      header: 'Delete Confirmation',
+      message: `Ali ste prepričani, da želite izbrisati ${student.firstName} ${student.lastName}?`,
+      header: 'Potrditev izbrisa',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
         this.studentService.deleteStudent(student.id!).subscribe({
@@ -255,15 +262,15 @@ export class StudentsOverviewComponent implements OnInit {
             this.students = this.students.filter(s => s.id !== student.id);
             this.messageService.add({
               severity: 'success',
-              summary: 'Success',
-              detail: 'Student deleted successfully'
+              summary: 'Uspeh',
+              detail: 'Študent uspešno izbrisan'
             });
           },
           error: (error) => {
             this.messageService.add({
               severity: 'error',
-              summary: 'Error',
-              detail: 'Failed to delete student'
+              summary: 'Napaka',
+              detail: 'Napaka pri brisanju študenta'
             });
             console.error('Error deleting student:', error);
           }
