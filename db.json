@@ -1,22 +1,11 @@
 {
   "students": [
     {
-      "id": "1",
-      "firstName": "Luka",
-      "lastName": "Novak",
-      "email": "luka.novak@example.com",
-      "enrollmentDate": "2023-09-01",
-      "courses": [
-        "Fizika",
-        "Računalništvo"
-      ]
-    },
-    {
       "id": "2",
       "firstName": "Ana",
       "lastName": "Horvat",
       "email": "ana.horvat@example.com",
-      "enrollmentDate": "2023-09-01",
+      "enrollmentDate": "2025-09-01",
       "courses": [
         "Biologija",
         "Kemija",
@@ -31,7 +20,7 @@
       "firstName": "Matej",
       "lastName": "Kovač",
       "email": "matej.kovac@example.com",
-      "enrollmentDate": "2023-09-05",
+      "enrollmentDate": "2025-09-05",
       "courses": [
         "Zgodovina",
         "Geografija",
@@ -43,7 +32,7 @@
       "firstName": "Eva",
       "lastName": "Krajnc",
       "email": "eva.krajnc@example.com",
-      "enrollmentDate": "2023-09-03",
+      "enrollmentDate": "2025-09-03",
       "courses": [
         "Glasba",
         "Drama",
@@ -55,7 +44,7 @@
       "firstName": "Jan",
       "lastName": "Zupan",
       "email": "jan.zupan@example.com",
-      "enrollmentDate": "2023-09-02",
+      "enrollmentDate": "2025-09-02",
       "courses": [
         "Ekonomija",
         "Poslovanje",
@@ -67,7 +56,7 @@
       "firstName": "Maja",
       "lastName": "Kos",
       "email": "maja.kos@example.com",
-      "enrollmentDate": "2023-09-04",
+      "enrollmentDate": "2025-09-04",
       "courses": [
         "Psihologija",
         "Sociologija",
@@ -79,7 +68,7 @@
       "firstName": "Tim",
       "lastName": "Petrič",
       "email": "tim.petric@example.com",
-      "enrollmentDate": "2023-09-01",
+      "enrollmentDate": "2025-09-01",
       "courses": [
         "Računalništvo",
         "Matematika",
@@ -91,7 +80,7 @@
       "firstName": "Nika",
       "lastName": "Golob",
       "email": "nika.golob@example.com",
-      "enrollmentDate": "2023-09-06",
+      "enrollmentDate": "2025-09-06",
       "courses": [
         "Literatura",
         "Kreativno pisanje",
@@ -103,7 +92,7 @@
       "firstName": "David",
       "lastName": "Mlakar",
       "email": "david.mlakar@example.com",
-      "enrollmentDate": "2023-09-02",
+      "enrollmentDate": "2025-09-02",
       "courses": [
         "Inženiring",
         "Fizika",
@@ -115,7 +104,7 @@
       "firstName": "Sara",
       "lastName": "Potočnik",
       "email": "sara.potocnik@example.com",
-      "enrollmentDate": "2023-09-03",
+      "enrollmentDate": "2025-09-03",
       "courses": [
         "Biologija",
         "Okoljske vede",
@@ -127,7 +116,7 @@
       "firstName": "Gal",
       "lastName": "Vidmar",
       "email": "gal.vidmar@example.com",
-      "enrollmentDate": "2023-09-05",
+      "enrollmentDate": "2025-09-05",
       "courses": [
         "Politične vede",
         "Zgodovina",
@@ -139,7 +128,7 @@
       "firstName": "Ema",
       "lastName": "Petek",
       "email": "ema.petek@example.com",
-      "enrollmentDate": "2023-09-01",
+      "enrollmentDate": "2025-09-01",
       "courses": [
         "Marketing",
         "Poslovanje",
@@ -151,7 +140,7 @@
       "firstName": "Filip",
       "lastName": "Hribar",
       "email": "filip.hribar@example.com",
-      "enrollmentDate": "2023-09-04",
+      "enrollmentDate": "2025-09-04",
       "courses": [
         "Arhitektura",
         "Umetnost",
@@ -163,7 +152,7 @@
       "firstName": "Lara",
       "lastName": "Prijatelj",
       "email": "lara.prijatelj@example.com",
-      "enrollmentDate": "2023-09-02",
+      "enrollmentDate": "2025-09-02",
       "courses": [
         "Zdravstvena nega",
         "Biologija",
@@ -175,7 +164,7 @@
       "firstName": "Mark",
       "lastName": "Močnik",
       "email": "mark.mocnik@example.com",
-      "enrollmentDate": "2023-09-06",
+      "enrollmentDate": "2025-09-06",
       "courses": [
         "Finance",
         "Računovodstvo",
@@ -187,7 +176,7 @@
       "firstName": "Nina",
       "lastName": "Kavčič",
       "email": "nina.kavcic@example.com",
-      "enrollmentDate": "2023-09-01",
+      "enrollmentDate": "2025-09-01",
       "courses": [
         "Novinarstvo",
         "Medijske študije",
@@ -199,7 +188,7 @@
       "firstName": "Anže",
       "lastName": "Medved",
       "email": "anze.medved@example.com",
-      "enrollmentDate": "2023-09-03",
+      "enrollmentDate": "2025-09-03",
       "courses": [
         "Strojništvo",
         "Fizika",
@@ -211,7 +200,7 @@
       "firstName": "Teja",
       "lastName": "Babnik",
       "email": "teja.babnik@example.com",
-      "enrollmentDate": "2023-09-05",
+      "enrollmentDate": "2025-09-05",
       "courses": [
         "Jeziki",
         "Literatura",
@@ -223,7 +212,7 @@
       "firstName": "Žan",
       "lastName": "Erjavec",
       "email": "zan.erjavec@example.com",
-      "enrollmentDate": "2023-09-02",
+      "enrollmentDate": "2025-09-02",
       "courses": [
         "Informacijska tehnologija",
         "Računalništvo",
@@ -235,7 +224,7 @@
       "firstName": "Klara",
       "lastName": "Rozman",
       "email": "klara.rozman@example.com",
-      "enrollmentDate": "2023-09-04",
+      "enrollmentDate": "2025-09-04",
       "courses": [
         "Farmacija",
         "Kemija",
@@ -247,7 +236,7 @@
       "firstName": "Blaž",
       "lastName": "Kovačič",
       "email": "blaz.kovacic@example.com",
-      "enrollmentDate": "2023-09-01",
+      "enrollmentDate": "2025-09-01",
       "courses": [
         "Grafično oblikovanje",
         "Umetnost",
@@ -259,7 +248,7 @@
       "firstName": "Zala",
       "lastName": "Kalan",
       "email": "zala.kalan@example.com",
-      "enrollmentDate": "2023-09-06",
+      "enrollmentDate": "2025-09-06",
       "courses": [
         "Pedagogika",
         "Psihologija",
@@ -271,7 +260,7 @@
       "firstName": "Rok",
       "lastName": "Debeljak",
       "email": "rok.debeljak@example.com",
-      "enrollmentDate": "2023-09-03",
+      "enrollmentDate": "2025-09-03",
       "courses": [
         "Gradbeništvo",
         "Matematika",
@@ -283,7 +272,7 @@
       "firstName": "Anja",
       "lastName": "Jereb",
       "email": "anja.jereb@example.com",
-      "enrollmentDate": "2023-09-05",
+      "enrollmentDate": "2025-09-05",
       "courses": [
         "Veterina",
         "Biologija",
@@ -295,7 +284,7 @@
       "firstName": "Nejc",
       "lastName": "Štular",
       "email": "nejc.stular@example.com",
-      "enrollmentDate": "2023-09-02",
+      "enrollmentDate": "2025-09-02",
       "courses": [
         "Podatkovna znanost",
         "Statistika",
@@ -307,7 +296,7 @@
       "firstName": "Petra",
       "lastName": "Fabjan",
       "email": "petra.fabjan@example.com",
-      "enrollmentDate": "2023-09-04",
+      "enrollmentDate": "2025-09-04",
       "courses": [
         "Mednarodni odnosi",
         "Politične vede",
@@ -319,7 +308,7 @@
       "firstName": "Urban",
       "lastName": "Kranjc",
       "email": "urban.kranjc@example.com",
-      "enrollmentDate": "2023-09-01",
+      "enrollmentDate": "2025-09-01",
       "courses": [
         "Elektrotehnika",
         "Fizika",
@@ -331,7 +320,7 @@
       "firstName": "Ines",
       "lastName": "Božič",
       "email": "ines.bozic@example.com",
-      "enrollmentDate": "2023-09-06",
+      "enrollmentDate": "2025-09-06",
       "courses": [
         "Modno oblikovanje",
         "Umetnost",
@@ -343,7 +332,7 @@
       "firstName": "Gregor",
       "lastName": "Pintarič",
       "email": "gregor.pintaric@example.com",
-      "enrollmentDate": "2023-09-03",
+      "enrollmentDate": "2025-09-03",
       "courses": [
         "Letalstvo",
         "Fizika",
@@ -355,7 +344,7 @@
       "firstName": "Špela",
       "lastName": "Završnik",
       "email": "spela.zavrsnik@example.com",
-      "enrollmentDate": "2023-09-05",
+      "enrollmentDate": "2025-09-05",
       "courses": [
         "Pravo",
         "Politične vede",
@@ -367,7 +356,7 @@
       "firstName": "Matic",
       "lastName": "Kunstelj",
       "email": "matic.kunstelj@example.com",
-      "enrollmentDate": "2023-09-02",
+      "enrollmentDate": "2025-09-02",
       "courses": [
         "Programsko inženirstvo",
         "Računalništvo",
@@ -379,7 +368,7 @@
       "firstName": "Tina",
       "lastName": "Oblak",
       "email": "tina.oblak@example.com",
-      "enrollmentDate": "2023-09-04",
+      "enrollmentDate": "2025-09-04",
       "courses": [
         "Človeški viri",
         "Poslovanje",
@@ -391,7 +380,7 @@
       "firstName": "Luka",
       "lastName": "Pirnat",
       "email": "luka.pirnat@example.com",
-      "enrollmentDate": "2023-09-01",
+      "enrollmentDate": "2025-09-01",
       "courses": [
         "Morska biologija",
         "Biologija",
@@ -403,7 +392,7 @@
       "firstName": "Katja",
       "lastName": "Tomažič",
       "email": "katja.tomazic@example.com",
-      "enrollmentDate": "2023-09-06",
+      "enrollmentDate": "2025-09-06",
       "courses": [
         "Odnosi z javnostmi",
         "Marketing",
@@ -415,7 +404,7 @@
       "firstName": "Marko",
       "lastName": "Koren",
       "email": "marko.koren@example.com",
-      "enrollmentDate": "2023-09-03",
+      "enrollmentDate": "2025-09-03",
       "courses": [
         "Športna znanost",
         "Telesna vzgoja",
@@ -427,7 +416,7 @@
       "firstName": "Neža",
       "lastName": "Stanovnik",
       "email": "neza.stanovnik@example.com",
-      "enrollmentDate": "2023-09-05",
+      "enrollmentDate": "2025-09-05",
       "courses": [
         "Notranje oblikovanje",
         "Umetnost",
@@ -439,7 +428,7 @@
       "firstName": "Jaka",
       "lastName": "Lampret",
       "email": "jaka.lampret@example.com",
-      "enrollmentDate": "2023-09-02",
+      "enrollmentDate": "2025-09-02",
       "courses": [
         "Astronomija",
         "Fizika",
@@ -451,7 +440,7 @@
       "firstName": "Maša",
       "lastName": "Pavlin",
       "email": "masa.pavlin@example.com",
-      "enrollmentDate": "2023-09-04",
+      "enrollmentDate": "2025-09-04",
       "courses": [
         "Filmske študije",
         "Medijske študije",
@@ -463,7 +452,7 @@
       "firstName": "Aljaž",
       "lastName": "Černela",
       "email": "aljaz.cernela@example.com",
-      "enrollmentDate": "2023-09-01",
+      "enrollmentDate": "2025-09-01",
       "courses": [
         "Robotika",
         "Računalništvo",
@@ -475,7 +464,7 @@
       "firstName": "Živa",
       "lastName": "Mihelič",
       "email": "ziva.mihelic@example.com",
-      "enrollmentDate": "2023-09-06",
+      "enrollmentDate": "2025-09-06",
       "courses": [
         "Kulinarne umetnosti",
         "Prehrana",
@@ -495,7 +484,7 @@
       ]
     },
     {
-      "id": 43,
+      "id": "43",
       "firstName": "Miha",
       "lastName": "Konjar",
       "email": "test1@gmail.com",
@@ -503,7 +492,21 @@
       "courses": [
         "Tehnologija",
         "Glasbena produkcija",
-        "Socialno delo"
+        "Podatkovna znanost"
+      ]
+    },
+    {
+      "id": 44,
+      "firstName": "Ime",
+      "lastName": "Priimek",
+      "email": "posta@mail.net",
+      "enrollmentDate": "2025-11-10",
+      "courses": [
+        "Biologija",
+        "Računalništvo",
+        "Fizika",
+        "Angleščina",
+        "Kemija"
       ]
     }
   ]

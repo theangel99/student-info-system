@@ -40,7 +40,7 @@ export class StudentsOverviewComponent implements OnInit {
   editStudentForm!: FormGroup;
   selectedStudent: Student | null = null;
   superAdminName = 'Skrbnik';
-  
+
   availableCourses = [
     'Matematika',
     'Fizika',
@@ -52,61 +52,15 @@ export class StudentsOverviewComponent implements OnInit {
     'Geografija',
     'Umetnost',
     'Glasba',
-    'Drama',
-    'Telesna vzgoja',
     'Ekonomija',
-    'Poslovanje',
     'Psihologija',
-    'Sociologija',
-    'Filozofija',
-    'Literatura',
-    'Kreativno pisanje',
-    'Inženiring',
-    'Okoljske vede',
-    'Politične vede',
     'Pravo',
-    'Marketing',
     'Arhitektura',
-    'Oblikovanje',
     'Zdravstvena nega',
-    'Finance',
     'Računovodstvo',
     'Novinarstvo',
-    'Medijske študije',
-    'Strojništvo',
-    'Jeziki',
-    'Informacijska tehnologija',
-    'Omrežja',
-    'Farmacija',
-    'Grafično oblikovanje',
-    'Digitalni mediji',
-    'Pedagogika',
-    'Gradbeništvo',
-    'Veterina',
-    'Vedenje živali',
-    'Podatkovna znanost',
-    'Statistika',
-    'Mednarodni odnosi',
     'Elektrotehnika',
-    'Modno oblikovanje',
-    'Letalstvo',
-    'Programsko inženirstvo',
-    'Človeški viri',
-    'Morska biologija',
-    'Odnosi z javnostmi',
-    'Komunikacije',
-    'Športna znanost',
-    'Notranje oblikovanje',
-    'Astronomija',
-    'Filmske študije',
-    'Robotika',
-    'Kulinarne umetnosti',
-    'Prehrana',
-    'Geologija',
     'Fotografija',
-    'Glasbena produkcija',
-    'Tehnologija',
-    'Socialno delo',
     'Biokemija'
   ];
 
@@ -184,13 +138,13 @@ export class StudentsOverviewComponent implements OnInit {
   addStudent(): void {
     if (this.studentForm.valid) {
       const newStudent: Student = this.studentForm.value;
-      
+
       // Calculate next ID based on existing students
-      const maxId = this.students.length > 0 
+      const maxId = this.students.length > 0
         ? Math.max(...this.students.map(s => s.id || 0))
         : 0;
       newStudent.id = maxId + 1;
-      
+
       this.studentService.createStudent(newStudent).subscribe({
         next: (student) => {
           this.loadStudents(); // Reload to get proper ID
@@ -222,7 +176,7 @@ export class StudentsOverviewComponent implements OnInit {
         ...this.selectedStudent,
         courses: this.editStudentForm.value.courses
       };
-      
+
       this.studentService.updateStudent(this.selectedStudent.id!, updatedStudent).subscribe({
         next: (student) => {
           const index = this.students.findIndex(s => s.id === student.id);
