@@ -42,7 +42,7 @@
         <th>E-pošta</th>
         <th>Datum vpisa</th>
         <th>Predmeti</th>
-        <th>Uredi</th>
+        <th>Akcije</th>
       </tr>
     </ng-template>
 
@@ -57,6 +57,12 @@
           <span class="courses-list">{{ student.courses.join(', ') }}</span>
         </td>
         <td>
+          <p-button
+            icon="pi pi-eye"
+            styleClass="p-button-rounded p-button-info p-button-text"
+            (onClick)="viewDetails(student)"
+            pTooltip="Poglej podrobnosti">
+          </p-button>
           <p-button
             icon="pi pi-pencil"
             styleClass="p-button-rounded p-button-warning p-button-text"

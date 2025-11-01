@@ -364,16 +364,15 @@
   .p-paginator {
     background: #fafbfc;
     border-radius: 0;
-    padding: 0.625rem 0.75rem !important;
+    padding: 0.75rem !important;
     border-top: 1px solid #e5e7eb;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: visible !important;
     display: flex !important;
     align-items: center !important;
-    gap: 0.625rem;
-    min-height: 3.75rem !important;
-    max-height: 3.75rem !important;
-    height: 3.75rem !important;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    min-height: 3rem !important;
 
     &::-webkit-scrollbar {
       height: 5px;
@@ -492,14 +491,13 @@
   }
 
   .p-dropdown-panel {
-    position: fixed !important;
     border-radius: 4px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
     border: 1px solid #cbd5e0;
     z-index: 9999 !important;
     background: white;
     min-width: 5rem !important;
-    pointer-events: auto !important;
+    max-width: 8rem !important;
 
     .p-dropdown-items-wrapper {
       max-height: 200px !important;
@@ -565,19 +563,15 @@
     margin: 0 !important;
   }
 
-  // Force paginator to maintain exact height
-  .p-datatable .p-paginator-bottom {
-    height: 2.95rem !important;
-    min-height: 2.95rem !important;
-    max-height: 4rem !important;
-    overflow: visible !important;
-    padding: 0rem 0rem !important;
-  }
-
   // Ensure table wrapper doesn't interfere with pagination
   .p-datatable-wrapper {
     overflow-x: auto;
-    overflow-y: visible !important;
+    overflow-y: visible;
+  }
+
+  // Make sure paginator container doesn't clip dropdown
+  .p-datatable .p-paginator-bottom {
+    overflow: visible !important;
   }
 
   // Keep dropdown open when hovering over it

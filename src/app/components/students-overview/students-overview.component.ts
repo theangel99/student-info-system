@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
@@ -70,7 +71,8 @@ export class StudentsOverviewComponent implements OnInit {
     private studentService: StudentService,
     private fb: FormBuilder,
     private confirmationService: ConfirmationService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private router: Router
   ) {
     this.initializeForms();
   }
@@ -139,17 +141,25 @@ export class StudentsOverviewComponent implements OnInit {
    */
   addStudent(): void {
     if (this.studentForm.valid) {
-      const newStudent: Student = this.studentForm.value;
-
-      // Calculate next ID based on existing students
+      const newStudentData: Student = this.studentForm.value;
+      
+      // Calculate next numeric ID
       const maxId = this.students.length > 0
-        ? Math.max(...this.students.map(s => s.id || 0))
+        ? Math.max(...this.students.map(s => {
+            if (typeof s.id === 'number') return s.id;
+            if (typeof s.id === 'string') return parseInt(s.id) || 0;
+            return 0;
+          }))
         : 0;
-      newStudent.id = maxId + 1;
+      const nextId = maxId + 1;
+      
+      // Assign the numeric ID
+      const newStudent: Student = { ...newStudentData, id: nextId };
 
       this.studentService.createStudent(newStudent).subscribe({
-        next: (student) => {
-          this.loadStudents(); // Reload to get proper ID
+        next: (createdStudent) => {
+          // Add the returned student to local state
+          this.students = [...this.students, createdStudent];
           this.displayAddDialog = false;
           this.messageService.add({
             severity: 'success',
@@ -202,6 +212,13 @@ export class StudentsOverviewComponent implements OnInit {
         }
       });
     }
+  }
+
+  /**
+   * Navigate to student details page
+   */
+  viewDetails(student: Student): void {
+    this.router.navigate(['/students', student.id]);
   }
 
   /**
