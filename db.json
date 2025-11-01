@@ -11,8 +11,7 @@
         "Kemija",
         "Angleščina",
         "Matematika",
-        "Fizika",
-        "Računalništvo"
+        "Fizika"
       ]
     },
     {
@@ -23,8 +22,7 @@
       "enrollmentDate": "2025-09-05",
       "courses": [
         "Zgodovina",
-        "Geografija",
-        "Umetnost"
+        "Geografija"
       ]
     },
     {
@@ -34,9 +32,7 @@
       "email": "eva.krajnc@example.com",
       "enrollmentDate": "2025-09-03",
       "courses": [
-        "Glasba",
-        "Drama",
-        "Telesna vzgoja"
+        "Glasba"
       ]
     },
     {
@@ -47,7 +43,6 @@
       "enrollmentDate": "2025-09-02",
       "courses": [
         "Ekonomija",
-        "Poslovanje",
         "Matematika"
       ]
     },

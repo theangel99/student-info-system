@@ -40,6 +40,8 @@ export class StudentsOverviewComponent implements OnInit {
   editStudentForm!: FormGroup;
   selectedStudent: Student | null = null;
   superAdminName = 'Skrbnik';
+  superAdminRole = 'Admin';
+  userAvatar = 'pi pi-user';
 
   availableCourses = [
     'Matematika',
